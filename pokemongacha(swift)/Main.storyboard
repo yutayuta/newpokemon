@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAC-2S-rdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="-160"/>
+            <point key="canvasLocation" x="451" y="-160"/>
         </scene>
         <!--Ball View Controller-->
         <scene sceneID="wpG-Xg-nzI">
@@ -62,7 +62,7 @@
                                 </state>
                                 <connections>
                                     <action selector="back" destination="jeg-39-F1S" eventType="touchUpInside" id="cOI-0V-Yqm"/>
-                                    <segue destination="mKv-Fc-dGz" kind="presentation" modalTransitionStyle="crossDissolve" id="s2j-IJ-T5V"/>
+                                    <segue destination="mKv-Fc-dGz" kind="presentation" modalTransitionStyle="crossDissolve" id="6Oh-ln-pxW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,6 +120,6 @@
         <image name="pokemonnzukannew.png" width="355" height="70"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s2j-IJ-T5V"/>
+        <segue reference="6Oh-ln-pxW"/>
     </inferredMetricsTieBreakers>
 </document>
