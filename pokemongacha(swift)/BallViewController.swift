@@ -15,29 +15,19 @@ class BallViewController: UIViewController {
     //変数やパーツの宣言はここ
     @IBOutlet var monsterImageView: UIImageView!
     
-    var i:String!
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         //乱数作成
-        var number = arc4random()%10
+        var number = arc4random()%151
         
-        i = "\(number)"
-        
-        monsterImageView.image = UIImage(named: "i.png")
+        monsterImageView.image = UIImage(named: "\(number).gif")
         
     }
     
-    
     override func didReceiveMemoryWarning(){
-        
-        
         super.didReceiveMemoryWarning()
-        
-        
-        
     }
     
     @IBAction func back() {
