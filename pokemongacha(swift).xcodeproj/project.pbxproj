@@ -174,10 +174,10 @@
 		D6DC06891AAC34DF00855B26 /* gacha2.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC06861AAC34DF00855B26 /* gacha2.png */; };
 		D6DC068A1AAC34DF00855B26 /* monsterball.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC06871AAC34DF00855B26 /* monsterball.png */; };
 		D6DC068B1AAC34DF00855B26 /* pokemon opening.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DC06881AAC34DF00855B26 /* pokemon opening.png */; };
-		D6DC06901AAC36D400855B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6DC068E1AAC36D400855B26 /* Main.storyboard */; };
 		D6DC06941AAC378B00855B26 /* BallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC06931AAC378B00855B26 /* BallViewController.swift */; };
 		D6DC06961AAC395000855B26 /* hitokage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6DC06951AAC395000855B26 /* hitokage.jpeg */; };
 		D6DC06981AAC398D00855B26 /* zenigame.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D6DC06971AAC398D00855B26 /* zenigame.jpeg */; };
+		D6F570E71AAD5E6300843F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F570E61AAD5E6300843F45 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,10 +362,10 @@
 		D6DC06861AAC34DF00855B26 /* gacha2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gacha2.png; sourceTree = "<group>"; };
 		D6DC06871AAC34DF00855B26 /* monsterball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monsterball.png; sourceTree = "<group>"; };
 		D6DC06881AAC34DF00855B26 /* pokemon opening.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pokemon opening.png"; sourceTree = "<group>"; };
-		D6DC068F1AAC36D400855B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6DC06931AAC378B00855B26 /* BallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallViewController.swift; sourceTree = "<group>"; };
 		D6DC06951AAC395000855B26 /* hitokage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hitokage.jpeg; sourceTree = "<group>"; };
 		D6DC06971AAC398D00855B26 /* zenigame.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zenigame.jpeg; sourceTree = "<group>"; };
+		D6F570E61AAD5E6300843F45 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +408,58 @@
 			isa = PBXGroup;
 			children = (
 				D6AD2EBC1AAD317100F7F8A5 /* pokemonnzukannew.png */,
+				D6F570E51AAD5BEF00843F45 /* image */,
+				D6DC06971AAC398D00855B26 /* zenigame.jpeg */,
+				D6DC06951AAC395000855B26 /* hitokage.jpeg */,
+				D6DC06861AAC34DF00855B26 /* gacha2.png */,
+				D6DC06871AAC34DF00855B26 /* monsterball.png */,
+				D6DC06881AAC34DF00855B26 /* pokemon opening.png */,
+				D6DC06841AAC26DD00855B26 /* pikachu.png */,
+				D6DC067E1AAC0ED500855B26 /* gacha2.jpg */,
+				D6DC067C1AAC0DD100855B26 /* gacha.png */,
+				D6DC06761AAC0BB600855B26 /* monsterball.jpeg */,
+				D6DC06771AAC0BB600855B26 /* pokemon all.png */,
+				D6DC06781AAC0BB600855B26 /* pokemon opening.jpg */,
+				D6DC06561AAC091A00855B26 /* AppDelegate.swift */,
+				D6DC06581AAC091A00855B26 /* ViewController.swift */,
+				D6DC06801AAC222E00855B26 /* gachaViewController.swift */,
+				D6DC06931AAC378B00855B26 /* BallViewController.swift */,
+				D6F570E61AAD5E6300843F45 /* Main.storyboard */,
+				D6DC065D1AAC091A00855B26 /* Images.xcassets */,
+				D6DC065F1AAC091A00855B26 /* LaunchScreen.xib */,
+				D6DC06541AAC091A00855B26 /* Supporting Files */,
+			);
+			path = "pokemongacha(swift)";
+			sourceTree = "<group>";
+		};
+		D6DC06541AAC091A00855B26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6DC06551AAC091A00855B26 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6DC06691AAC091A00855B26 /* pokemongacha(swift)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D6DC066C1AAC091A00855B26 /* pokemongacha_swift_Tests.swift */,
+				D6DC066A1AAC091A00855B26 /* Supporting Files */,
+			);
+			path = "pokemongacha(swift)Tests";
+			sourceTree = "<group>";
+		};
+		D6DC066A1AAC091A00855B26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6DC066B1AAC091A00855B26 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6F570E51AAD5BEF00843F45 /* image */ = {
+			isa = PBXGroup;
+			children = (
 				D6AD2D8A1AAC85AE00F7F8A5 /* 001.gif */,
 				D6AD2D8B1AAC85AE00F7F8A5 /* 002.gif */,
 				D6AD2D8C1AAC85AE00F7F8A5 /* 003.gif */,
@@ -559,52 +611,8 @@
 				D6AD2E1F1AAC85AE00F7F8A5 /* 149.gif */,
 				D6AD2E201AAC85AE00F7F8A5 /* 150.gif */,
 				D6AD2E211AAC85AE00F7F8A5 /* 151.gif */,
-				D6DC06971AAC398D00855B26 /* zenigame.jpeg */,
-				D6DC06951AAC395000855B26 /* hitokage.jpeg */,
-				D6DC06861AAC34DF00855B26 /* gacha2.png */,
-				D6DC06871AAC34DF00855B26 /* monsterball.png */,
-				D6DC06881AAC34DF00855B26 /* pokemon opening.png */,
-				D6DC06841AAC26DD00855B26 /* pikachu.png */,
-				D6DC067E1AAC0ED500855B26 /* gacha2.jpg */,
-				D6DC067C1AAC0DD100855B26 /* gacha.png */,
-				D6DC06761AAC0BB600855B26 /* monsterball.jpeg */,
-				D6DC06771AAC0BB600855B26 /* pokemon all.png */,
-				D6DC06781AAC0BB600855B26 /* pokemon opening.jpg */,
-				D6DC06561AAC091A00855B26 /* AppDelegate.swift */,
-				D6DC06581AAC091A00855B26 /* ViewController.swift */,
-				D6DC06801AAC222E00855B26 /* gachaViewController.swift */,
-				D6DC06931AAC378B00855B26 /* BallViewController.swift */,
-				D6DC068E1AAC36D400855B26 /* Main.storyboard */,
-				D6DC065D1AAC091A00855B26 /* Images.xcassets */,
-				D6DC065F1AAC091A00855B26 /* LaunchScreen.xib */,
-				D6DC06541AAC091A00855B26 /* Supporting Files */,
 			);
-			path = "pokemongacha(swift)";
-			sourceTree = "<group>";
-		};
-		D6DC06541AAC091A00855B26 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D6DC06551AAC091A00855B26 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D6DC06691AAC091A00855B26 /* pokemongacha(swift)Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D6DC066C1AAC091A00855B26 /* pokemongacha_swift_Tests.swift */,
-				D6DC066A1AAC091A00855B26 /* Supporting Files */,
-			);
-			path = "pokemongacha(swift)Tests";
-			sourceTree = "<group>";
-		};
-		D6DC066A1AAC091A00855B26 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D6DC066B1AAC091A00855B26 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -733,7 +741,6 @@
 				D6AD2EA41AAC85AE00F7F8A5 /* 130.gif in Resources */,
 				D6AD2E981AAC85AE00F7F8A5 /* 118.gif in Resources */,
 				D6AD2E4E1AAC85AE00F7F8A5 /* 045.gif in Resources */,
-				D6DC06901AAC36D400855B26 /* Main.storyboard in Resources */,
 				D6DC06611AAC091A00855B26 /* LaunchScreen.xib in Resources */,
 				D6AD2E341AAC85AE00F7F8A5 /* 019.gif in Resources */,
 				D6AD2E8B1AAC85AE00F7F8A5 /* 105.gif in Resources */,
@@ -757,6 +764,7 @@
 				D6AD2E4C1AAC85AE00F7F8A5 /* 043.gif in Resources */,
 				D6AD2E8C1AAC85AE00F7F8A5 /* 106.gif in Resources */,
 				D6AD2EBD1AAD317100F7F8A5 /* pokemonnzukannew.png in Resources */,
+				D6F570E71AAD5E6300843F45 /* Main.storyboard in Resources */,
 				D6AD2E951AAC85AE00F7F8A5 /* 115.gif in Resources */,
 				D6AD2EAA1AAC85AE00F7F8A5 /* 136.gif in Resources */,
 				D6AD2E361AAC85AE00F7F8A5 /* 021.gif in Resources */,
@@ -902,14 +910,6 @@
 				D6DC06601AAC091A00855B26 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		D6DC068E1AAC36D400855B26 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6DC068F1AAC36D400855B26 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

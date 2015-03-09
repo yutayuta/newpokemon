@@ -15,7 +15,7 @@ class BallViewController: UIViewController {
     //変数やパーツの宣言はここ
     @IBOutlet var monsterImageView: UIImageView!
     
-    var i:String
+    var i:String!
     
     override func viewDidLoad() {
         
@@ -37,9 +37,12 @@ class BallViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
         
-        @IBAction func back() {
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
+        
+    }
+    
+    @IBAction func back() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
 }
