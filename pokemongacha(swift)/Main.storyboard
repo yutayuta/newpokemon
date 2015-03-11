@@ -73,50 +73,54 @@
                                 <rect key="frame" x="7" y="71" width="306" height="304"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-be-HeB">
-                                <rect key="frame" x="59" y="-25" width="288" height="526"/>
-                                <state key="normal">
+                                <rect key="frame" x="114" y="499" width="92" height="56"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="18"/>
+                                <state key="normal" title="もどる">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="back" destination="jeg-39-F1S" eventType="touchUpInside" id="cOI-0V-Yqm"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-aU-ST7">
-                                <rect key="frame" x="79" y="394" width="162" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ポケモンの名前を入力" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-aU-ST7">
+                                <rect key="frame" x="79" y="434" width="162" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-co-VyZ">
-                                <rect key="frame" x="137" y="427" width="46" height="30"/>
-                                <state key="normal" title="save">
+                                <rect key="frame" x="249" y="430" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="ok">
+                                    <color key="titleColor" red="0.28627854159999999" green="0.48039734090000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="ok:" destination="jeg-39-F1S" eventType="touchUpInside" id="nyv-sW-XeN"/>
                                     <action selector="save:" destination="jeg-39-F1S" eventType="touchUpInside" id="2wa-7Z-E5k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my9-ES-MtB">
-                                <rect key="frame" x="137" y="494" width="46" height="30"/>
-                                <state key="normal" title="load">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="load:" destination="jeg-39-F1S" eventType="touchUpInside" id="QuP-n6-yn2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-fB-ot0">
-                                <rect key="frame" x="53" y="457" width="215" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-fB-ot0">
+                                <rect key="frame" x="59" y="329" width="203" height="41"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.023768901452991265" blue="0.11867970724914423" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-Vq-yjM">
+                                <rect key="frame" x="48" y="14" width="225" height="49"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.86318522152045096" blue="0.18642932399028644" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="label" destination="VZa-fB-ot0" id="IHG-TZ-9VV"/>
                         <outlet property="monsterImageView" destination="PqM-aL-CN6" id="H1j-PV-J9Z"/>
+                        <outlet property="rare" destination="bg3-Vq-yjM" id="aDv-Bu-W4a"/>
                         <outlet property="textField" destination="Yb6-aU-ST7" id="1sR-rs-udA"/>
                     </connections>
                 </viewController>
