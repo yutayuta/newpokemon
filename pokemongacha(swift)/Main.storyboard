@@ -17,26 +17,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gacha2.png" translatesAutoresizingMaskIntoConstraints="NO" id="K85-dR-rr4">
-                                <rect key="frame" x="-29" y="42" width="389" height="526"/>
+                                <rect key="frame" x="-34" y="42" width="389" height="526"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokemonnzukannew.png" translatesAutoresizingMaskIntoConstraints="NO" id="SHX-e9-1Rc">
                                 <rect key="frame" x="45" y="-9" width="240" height="101"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXv-ui-FBh">
-                                <rect key="frame" x="137" y="344" width="57" height="37"/>
+                                <rect key="frame" x="45" y="397" width="57" height="37"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jeg-39-F1S" kind="show" id="Ik2-05-jlZ"/>
+                                    <segue destination="jeg-39-F1S" kind="presentation" modalTransitionStyle="crossDissolve" id="Ik2-05-jlZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="回転" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaY-cW-Ns0">
+                                <rect key="frame" x="125" y="324" width="71" height="68"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JY8-ia-e4E" appends="YES" id="ZLg-20-hrk"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAC-2S-rdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="JY8-ia-e4E">
+                    <connections>
+                        <outlet property="delegate" destination="mKv-Fc-dGz" id="PWl-hc-5la"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="451" y="-160"/>
         </scene>
@@ -53,29 +70,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PqM-aL-CN6">
-                                <rect key="frame" x="79" y="179" width="161" height="157"/>
+                                <rect key="frame" x="7" y="71" width="306" height="304"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-be-HeB">
-                                <rect key="frame" x="15" y="7" width="288" height="526"/>
+                                <rect key="frame" x="59" y="-25" width="288" height="526"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="back" destination="jeg-39-F1S" eventType="touchUpInside" id="cOI-0V-Yqm"/>
-                                    <segue destination="mKv-Fc-dGz" kind="presentation" modalTransitionStyle="crossDissolve" id="6Oh-ln-pxW"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-aU-ST7">
+                                <rect key="frame" x="79" y="394" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-co-VyZ">
+                                <rect key="frame" x="137" y="427" width="46" height="30"/>
+                                <state key="normal" title="save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="jeg-39-F1S" eventType="touchUpInside" id="2wa-7Z-E5k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my9-ES-MtB">
+                                <rect key="frame" x="137" y="494" width="46" height="30"/>
+                                <state key="normal" title="load">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="load:" destination="jeg-39-F1S" eventType="touchUpInside" id="QuP-n6-yn2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-fB-ot0">
+                                <rect key="frame" x="53" y="457" width="215" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="label" destination="VZa-fB-ot0" id="IHG-TZ-9VV"/>
                         <outlet property="monsterImageView" destination="PqM-aL-CN6" id="H1j-PV-J9Z"/>
+                        <outlet property="textField" destination="Yb6-aU-ST7" id="1sR-rs-udA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOK-e5-wiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="-160"/>
+            <point key="canvasLocation" x="802" y="-160"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6xF-Vg-SMt">
@@ -119,7 +166,4 @@
         <image name="pokemon opening.png" width="1920" height="1080"/>
         <image name="pokemonnzukannew.png" width="355" height="70"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="6Oh-ln-pxW"/>
-    </inferredMetricsTieBreakers>
 </document>
