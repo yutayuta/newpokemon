@@ -13,48 +13,36 @@ class BallViewController: UIViewController {
     //変数やパーツの宣言はここ！！
     @IBOutlet var monsterImageView: UIImageView!
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet var textField: UITextField!
     
-    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet var rareLabel: UILabel!
     
-    @IBOutlet weak var rareLabel: UILabel!
+    @IBOutlet var answerLabel: UILabel!
+    
+    //入力された名前のロード
+    @IBAction func load(){
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(textField.text?, forKey: "saveText")
+    }
+    //answer表示
+    @IBAction func answer(){
+        answerLabel.text = "zukan[\(number)]"
+    }
+    
+    
+    
+    /*
+    //戻る
+    @IBAction func back() {
+    self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    */
+    
     
     //number宣言
     var number:Int!
     
-    //okボタン
-    @IBAction func ok(sender: AnyObject) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(textField.text?, forKey: "saveText")
-    }
     
-    //answer表示
-    @IBAction func answer(sender: AnyObject) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        var loadText : String! = userDefaults.stringForKey("zukan[\(number)]")
-        answerLabel.text = loadText
-    }
-    
-    //戻ってくる
-    @IBAction func back() {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    //rare表示
-    @IBAction func rare(){
-        switch number{
-            
-        case 0:
-            rareLabel.text = "ウルトラレア！！"
-        case 1..<100:
-            rareLabel.text = "ノーマル"
-        case 100..<152:
-            rareLabel.text = "スーパーレア！"
-        default:
-            break
-        }
-        
-    }
     
     override func viewDidLoad() {
         
@@ -214,11 +202,31 @@ class BallViewController: UIViewController {
         zukan[150]="ミュウツー"
         zukan[151]="ミュウ"
         
+        
+        
         //乱数作成（0〜151まで）
         var number = arc4random()%152
         
         //画像割り当て
         monsterImageView.image = UIImage(named: "\(number).gif")
+        
+        
+        //rare表示
+         func rare(){
+            switch number{
+                
+            case 0:
+                rareLabel.text = "ウルトラレア！！"
+            case 1..<100:
+                rareLabel.text = "ノーマル"
+            case 100..<152:
+                rareLabel.text = "スーパーレア！"
+            default:
+                break
+            }
+        }
+        
+        
         
         
         /*
@@ -237,6 +245,9 @@ class BallViewController: UIViewController {
         
         
     }
+    
+    
+    
     
     override func didReceiveMemoryWarning(){
         

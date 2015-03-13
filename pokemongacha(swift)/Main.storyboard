@@ -74,21 +74,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-be-HeB">
                                 <rect key="frame" x="114" y="499" width="92" height="56"/>
-                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="18"/>
-                                <state key="normal" title="もどる">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="もどる"/>
                                 <connections>
-                                    <action selector="back" destination="jeg-39-F1S" eventType="touchUpInside" id="cOI-0V-Yqm"/>
+                                    <segue destination="mKv-Fc-dGz" kind="presentation" modalTransitionStyle="crossDissolve" id="nVU-9I-JDm"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ポケモンの名前を入力" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-aU-ST7">
-                                <rect key="frame" x="79" y="434" width="162" height="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-co-VyZ">
                                 <rect key="frame" x="249" y="430" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -97,8 +87,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ok:" destination="jeg-39-F1S" eventType="touchUpInside" id="nyv-sW-XeN"/>
-                                    <action selector="save:" destination="jeg-39-F1S" eventType="touchUpInside" id="2wa-7Z-E5k"/>
+                                    <action selector="answer" destination="jeg-39-F1S" eventType="touchUpInside" id="VZB-UW-A6f"/>
+                                    <action selector="load" destination="jeg-39-F1S" eventType="touchUpInside" id="aPI-bX-Yuc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-fB-ot0">
@@ -113,20 +103,26 @@
                                 <color key="textColor" red="1" green="0.86318522152045096" blue="0.18642932399028644" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ポケモンの名前を入力" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-aU-ST7">
+                                <rect key="frame" x="79" y="434" width="162" height="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="label" destination="VZa-fB-ot0" id="IHG-TZ-9VV"/>
+                        <outlet property="answerLabel" destination="VZa-fB-ot0" id="3uB-ch-9ps"/>
                         <outlet property="monsterImageView" destination="PqM-aL-CN6" id="H1j-PV-J9Z"/>
-                        <outlet property="rare" destination="bg3-Vq-yjM" id="aDv-Bu-W4a"/>
+                        <outlet property="rareLabel" destination="bg3-Vq-yjM" id="ZKu-EG-rAI"/>
                         <outlet property="textField" destination="Yb6-aU-ST7" id="1sR-rs-udA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOK-e5-wiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="-160"/>
+            <point key="canvasLocation" x="959" y="-146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6xF-Vg-SMt">
@@ -170,4 +166,7 @@
         <image name="pokemon opening.png" width="1920" height="1080"/>
         <image name="pokemonnzukannew.png" width="355" height="70"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nVU-9I-JDm"/>
+    </inferredMetricsTieBreakers>
 </document>
