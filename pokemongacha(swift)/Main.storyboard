@@ -23,39 +23,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokemonnzukannew.png" translatesAutoresizingMaskIntoConstraints="NO" id="SHX-e9-1Rc">
                                 <rect key="frame" x="45" y="-9" width="240" height="101"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXv-ui-FBh">
-                                <rect key="frame" x="45" y="397" width="57" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6n-xN-gdW" userLabel="zukan">
+                                <rect key="frame" x="181" y="442" width="114" height="93"/>
+                                <state key="normal" image="zukananime.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fdE-VZ-ZgF" kind="presentation" id="gmS-uW-XiD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXv-ui-FBh">
+                                <rect key="frame" x="98" y="305" width="102" height="93"/>
                                 <gestureRecognizers/>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="monsterballnew.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="jeg-39-F1S" kind="presentation" modalTransitionStyle="crossDissolve" id="Ik2-05-jlZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="回転" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaY-cW-Ns0">
-                                <rect key="frame" x="125" y="324" width="71" height="68"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="JY8-ia-e4E" appends="YES" id="ZLg-20-hrk"/>
-                                </connections>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAC-2S-rdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <rotationGestureRecognizer id="JY8-ia-e4E">
-                    <connections>
-                        <outlet property="delegate" destination="mKv-Fc-dGz" id="PWl-hc-5la"/>
-                    </connections>
-                </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="451" y="-160"/>
+            <point key="canvasLocation" x="560" y="-183"/>
         </scene>
         <!--Ball View Controller-->
         <scene sceneID="wpG-Xg-nzI">
@@ -74,30 +69,13 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bo-be-HeB">
                                 <rect key="frame" x="114" y="499" width="92" height="56"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="もどる"/>
                                 <connections>
                                     <segue destination="mKv-Fc-dGz" kind="presentation" modalTransitionStyle="crossDissolve" id="nVU-9I-JDm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-co-VyZ">
-                                <rect key="frame" x="249" y="430" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="ok">
-                                    <color key="titleColor" red="0.28627854159999999" green="0.48039734090000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="answer" destination="jeg-39-F1S" eventType="touchUpInside" id="VZB-UW-A6f"/>
-                                    <action selector="load" destination="jeg-39-F1S" eventType="touchUpInside" id="aPI-bX-Yuc"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-fB-ot0">
-                                <rect key="frame" x="59" y="329" width="203" height="41"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
-                                <color key="textColor" red="1" green="0.023768901452991265" blue="0.11867970724914423" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-Vq-yjM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-Vq-yjM" userLabel="result">
                                 <rect key="frame" x="48" y="14" width="225" height="49"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.86318522152045096" blue="0.18642932399028644" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,7 +86,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answer" destination="jeg-39-F1S" eventType="editingDidEndOnExit" id="flH-FS-9g4"/>
+                                    <action selector="deleate" destination="jeg-39-F1S" eventType="editingDidEndOnExit" id="Abw-z1-da1"/>
+                                    <action selector="load" destination="jeg-39-F1S" eventType="editingDidEndOnExit" id="eaq-EB-CQZ"/>
+                                    <action selector="result" destination="jeg-39-F1S" eventType="editingDidEndOnExit" id="WiP-AW-e3V"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-fB-ot0" userLabel="AnswerLabel">
+                                <rect key="frame" x="81" y="324" width="160" height="51"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.023768901452991265" blue="0.11867970724914423" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok6-eM-0ej" userLabel="rare">
+                                <rect key="frame" x="29" y="5" width="264" height="59"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.96902619950000002" green="0.26627110459999997" blue="0.26208568700000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -116,7 +112,8 @@
                     <connections>
                         <outlet property="answerLabel" destination="VZa-fB-ot0" id="3uB-ch-9ps"/>
                         <outlet property="monsterImageView" destination="PqM-aL-CN6" id="H1j-PV-J9Z"/>
-                        <outlet property="rareLabel" destination="bg3-Vq-yjM" id="ZKu-EG-rAI"/>
+                        <outlet property="rareLabel" destination="Ok6-eM-0ej" id="SJE-2i-PzC"/>
+                        <outlet property="resultLabel" destination="bg3-Vq-yjM" id="5rq-ag-BPk"/>
                         <outlet property="textField" destination="Yb6-aU-ST7" id="1sR-rs-udA"/>
                     </connections>
                 </viewController>
@@ -158,13 +155,90 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yw-2Q-Klk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109" y="-176"/>
+            <point key="canvasLocation" x="10" y="-183"/>
+        </scene>
+        <!--Zukan View Controller-->
+        <scene sceneID="UIB-2k-f5K">
+            <objects>
+                <viewController id="fdE-VZ-ZgF" customClass="zukanViewController" customModule="pokemongacha_swift_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hxs-Sv-ueS"/>
+                        <viewControllerLayoutGuide type="bottom" id="CAm-Dz-Av0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UfQ-Mk-WDN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-l5-HKG">
+                                <rect key="frame" x="97" y="516" width="127" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="もどる">
+                                    <color key="titleColor" red="0.24024063847790034" green="0.34594765923328208" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mKv-Fc-dGz" kind="presentation" id="63l-ru-xhd"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5vY-TI-4pc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="515"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5fk-wn-I8f">
+                                    <size key="itemSize" width="99" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Vom-r6-J1S" userLabel="cell" customClass="CustomCell" customModule="pokemongacha_swift_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iF8-vL-XAm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO0-0H-tXL">
+                                                    <rect key="frame" x="0.0" y="87" width="100" height="12"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="image" destination="iF8-vL-XAm" id="PdO-Ec-Enk"/>
+                                            <outlet property="title" destination="UO0-0H-tXL" id="ZOz-G1-nio"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="fdE-VZ-ZgF" id="Oi3-aT-cQC"/>
+                                    <outlet property="delegate" destination="fdE-VZ-ZgF" id="Dzh-cQ-s1z"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSV-Js-DWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="617"/>
         </scene>
     </scenes>
     <resources>
         <image name="gacha2.png" width="450" height="675"/>
+        <image name="monsterballnew.png" width="225" height="225"/>
         <image name="pokemon opening.png" width="1920" height="1080"/>
         <image name="pokemonnzukannew.png" width="355" height="70"/>
+        <image name="zukananime.png" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nVU-9I-JDm"/>

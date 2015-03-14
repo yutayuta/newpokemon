@@ -1,77 +1,10 @@
-//
-//  BallViewController.swift
-//  pokemongacha(swift)
-//
-//  Created by Yuta Araki on 2015/03/08.
-//  Copyright (c) 2015年 Yuta Araki. All rights reserved.
-//
-
 import UIKit
 
-
-
-class BallViewController: UIViewController, UITextFieldDelegate {
-    
-    //変数やパーツの宣言はここ！！
-    @IBOutlet var monsterImageView: UIImageView!
-    
-    @IBOutlet var textField: UITextField!
-    
-    @IBOutlet var answerLabel: UILabel!
-    
-    @IBOutlet var resultLabel: UILabel!
-    
-    @IBOutlet var rareLabel: UILabel!
-    
-    
-    
-    //answer表示
-    @IBAction func answer(){
-        answerLabel.text = zukan[number]
-    }
-    
-    
-    //入力された名前のロード
-    @IBAction func load(){
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(textField.text?, forKey: "saveText")
-    }
-    
-    
-    //結果
-    @IBAction func result(){
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let saveText = userDefaults.objectForKey("saveText") as String
-        if saveText == zukan[number] {
-            resultLabel.text = "成功！"
-            //図鑑収録
-            
-        }else{
-            resultLabel.text =  "・・・失敗"
-        }
-        
-    }
-    
-   /* //rare度消去
-    @IBAction func deleate(){
-        rareLabel.text =  ""
-    }
-    */
-    
-    //number宣言
-    var number:Int!
-    //zukan宣言
+class zukanViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     var zukan:[Int:String] = [0:"ポケモンマスター"]
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        /* textField.delegate = self    //追加
-        
-        */
-        
-        
-        //ディクショナリー(zukan)にポケモン名収録
         zukan[1]="フシギダネ"
         zukan[2]="フシギソウ"
         zukan[3]="フシギバナ"
@@ -223,37 +156,26 @@ class BallViewController: UIViewController, UITextFieldDelegate {
         zukan[149]="カイリュー"
         zukan[150]="ミュウツー"
         zukan[151]="ミュウ"
-        
-        
-        //乱数作成（0〜151まで）
-        number = Int(arc4random()%152)
-        
-        //画像割り当て
-        monsterImageView.image = UIImage(named: "\(number).gif")
-        
-        //rare度
-            switch number {
-            case 1...124:
-                rareLabel.text =  "ノーマルポケモンだ。\n気楽にいこう。"
-            case 125...143:
-                rareLabel.text =  "レアポケモンだ！\nこれは捕まえたい！"
-            case 144...151:
-                rareLabel.text =  "幻のポケモンだ！\n滅多にないチャンスだ！！"
-            default:
-                break
-        }
-        
-    }
-    
-   
-    
-    
-    /*
-    func textFieldShouldClear(textField: UITextField) -> Bool {
-    println("")
-    return true
-    }
-    */
-    
-}
 
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - UICollectionViewDelegate Protocol
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell:CustomCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CustomCell
+        cell.title.text = zukan[indexPath.row + 1]
+        cell.image.image = UIImage(named: "\(indexPath.row + 1).gif")
+        cell.backgroundColor = UIColor.blackColor()
+        return cell
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 151;
+    }
+}
