@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class BallViewController: UIViewController, UITextFieldDelegate {
+class BallViewController: UIViewController {
     
     //変数やパーツの宣言はここ！！
     @IBOutlet var monsterImageView: UIImageView!
@@ -22,8 +22,7 @@ class BallViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var resultLabel: UILabel!
     
     @IBOutlet var rareLabel: UILabel!
-    
-    
+
     
     //answer表示
     @IBAction func answer(){
@@ -52,11 +51,10 @@ class BallViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-   /* //rare度消去
+    //rare度消去
     @IBAction func deleate(){
         rareLabel.text =  ""
     }
-    */
     
     //number宣言
     var number:Int!
@@ -232,21 +230,18 @@ class BallViewController: UIViewController, UITextFieldDelegate {
         monsterImageView.image = UIImage(named: "\(number).gif")
         
         //rare度
-            switch number {
-            case 1...124:
-                rareLabel.text =  "ノーマルポケモンだ。\n気楽にいこう。"
-            case 125...143:
-                rareLabel.text =  "レアポケモンだ！\nこれは捕まえたい！"
-            case 144...151:
-                rareLabel.text =  "幻のポケモンだ！\n滅多にないチャンスだ！！"
-            default:
-                break
+        switch number {
+        case 1...124:
+            rareLabel.text =  "ノーマルポケモンだ。\n気楽にいこう。"
+        case 125...143:
+            rareLabel.text =  "レアポケモンだ！\nこれは捕まえたい！"
+        case 144...151:
+            rareLabel.text =  "幻のポケモンだ！\n滅多にないチャンスだ！！"
+        default:
+            break
         }
         
     }
-    
-   
-    
     
     /*
     func textFieldShouldClear(textField: UITextField) -> Bool {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D666571B1AB40BC20021AD37 /* monsterballnew.png in Resources */ = {isa = PBXBuildFile; fileRef = D666571A1AB40BC20021AD37 /* monsterballnew.png */; };
 		D666571F1AB40FC40021AD37 /* gacha2.png in Resources */ = {isa = PBXBuildFile; fileRef = D666571E1AB40FC40021AD37 /* gacha2.png */; };
+		D66657211AB442BB0021AD37 /* gacha0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D66657201AB442BA0021AD37 /* gacha0.jpg */; };
+		D66657231AB443530021AD37 /* gacha1.png in Resources */ = {isa = PBXBuildFile; fileRef = D66657221AB443530021AD37 /* gacha1.png */; };
 		D69AFFA71AB3B44700E4126E /* zukananime.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D69AFFA61AB3B44700E4126E /* zukananime.jpeg */; };
 		D69AFFA91AB3C07F00E4126E /* zukananime.png in Resources */ = {isa = PBXBuildFile; fileRef = D69AFFA81AB3C07F00E4126E /* zukananime.png */; };
 		D69AFFAB1AB3C36B00E4126E /* zukanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AFFAA1AB3C36B00E4126E /* zukanViewController.swift */; };
@@ -191,6 +193,8 @@
 /* Begin PBXFileReference section */
 		D666571A1AB40BC20021AD37 /* monsterballnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monsterballnew.png; sourceTree = "<group>"; };
 		D666571E1AB40FC40021AD37 /* gacha2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gacha2.png; sourceTree = "<group>"; };
+		D66657201AB442BA0021AD37 /* gacha0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gacha0.jpg; sourceTree = "<group>"; };
+		D66657221AB443530021AD37 /* gacha1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gacha1.png; sourceTree = "<group>"; };
 		D69AFFA61AB3B44700E4126E /* zukananime.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zukananime.jpeg; sourceTree = "<group>"; };
 		D69AFFA81AB3C07F00E4126E /* zukananime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zukananime.png; sourceTree = "<group>"; };
 		D69AFFAA1AB3C36B00E4126E /* zukanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = zukanViewController.swift; sourceTree = "<group>"; };
@@ -403,6 +407,8 @@
 		D6DC06531AAC091A00855B26 /* pokemongacha(swift) */ = {
 			isa = PBXGroup;
 			children = (
+				D66657221AB443530021AD37 /* gacha1.png */,
+				D66657201AB442BA0021AD37 /* gacha0.jpg */,
 				D666571E1AB40FC40021AD37 /* gacha2.png */,
 				D666571A1AB40BC20021AD37 /* monsterballnew.png */,
 				D69AFFA81AB3C07F00E4126E /* zukananime.png */,
@@ -691,6 +697,7 @@
 			files = (
 				D6AD2EAE1AAC85AE00F7F8A5 /* 140.gif in Resources */,
 				D6AD2E941AAC85AE00F7F8A5 /* 114.gif in Resources */,
+				D66657231AB443530021AD37 /* gacha1.png in Resources */,
 				D6AD2E931AAC85AE00F7F8A5 /* 113.gif in Resources */,
 				D6AD2EB81AAC85AE00F7F8A5 /* 150.gif in Resources */,
 				D6AD2E531AAC85AE00F7F8A5 /* 50.gif in Resources */,
@@ -826,6 +833,7 @@
 				D6AD2EB71AAC85AE00F7F8A5 /* 149.gif in Resources */,
 				D6AD2EAD1AAC85AE00F7F8A5 /* 139.gif in Resources */,
 				D6AD2E911AAC85AE00F7F8A5 /* 111.gif in Resources */,
+				D66657211AB442BB0021AD37 /* gacha0.jpg in Resources */,
 				D6AD2E9B1AAC85AE00F7F8A5 /* 121.gif in Resources */,
 				D6AD2E501AAC85AE00F7F8A5 /* 47.gif in Resources */,
 				D6AD2E2C1AAC85AE00F7F8A5 /* 11.gif in Resources */,
