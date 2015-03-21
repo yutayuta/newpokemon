@@ -1,10 +1,20 @@
 import UIKit
 
-class zukanViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+class ZukanViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+    
     var zukan:[Int:String] = [0:"ポケモンマスター"]
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var newnumber: Int!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //保存されたデータを読み込む
+        newnumber = defaults.objectForKey("bookmarks") as Int
+        
+        
         zukan[1]="フシギダネ"
         zukan[2]="フシギソウ"
         zukan[3]="フシギバナ"
@@ -156,19 +166,26 @@ class zukanViewController: UIViewController,UICollectionViewDataSource,UICollect
         zukan[149]="カイリュー"
         zukan[150]="ミュウツー"
         zukan[151]="ミュウ"
-
+        
+        
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+   
+    
     
     // MARK: - UICollectionViewDelegate Protocol
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:CustomCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CustomCell
-        cell.title.text = zukan[indexPath.row + 1]
-        cell.image.image = UIImage(named: "\(indexPath.row + 1).gif")
-        cell.backgroundColor = UIColor.blackColor()
-        return cell
+    func collectionView(collectionView: UICollectionView,
+        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+            let cell:CustomCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CustomCell
+            //名前表示
+            cell.title.text = zukan[indexPath.row + 1]
+            //画像表示
+            if  (indexPath.row + 1) == (newnumber + 1) {
+                cell.image.image = UIImage(named: "\(newnumber + 1).gif")
+            }else{
+                cell.image.image = UIImage(named: "mark_question.png")
+            }
+            cell.backgroundColor = UIColor.blackColor()
+            return cell
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -179,3 +196,9 @@ class zukanViewController: UIViewController,UICollectionViewDataSource,UICollect
         return 151;
     }
 }
+
+/*
+//ポケモン全表示
+cell.image.image = UIImage(named: "\(indexPath.row + 1).gif")
+*/
+

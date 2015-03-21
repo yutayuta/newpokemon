@@ -12,38 +12,37 @@ import UIKit
 
 class BallViewController: UIViewController {
     
+    //defaultsの宣言（NAUserDefaults用）
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    
     //変数やパーツの宣言はここ！！
     @IBOutlet var monsterImageView: UIImageView!
-    
     @IBOutlet var textField: UITextField!
-    
     @IBOutlet var answerLabel: UILabel!
-    
     @IBOutlet var resultLabel: UILabel!
-    
     @IBOutlet var rareLabel: UILabel!
-
     
-    //answer表示
+    
+    //答え表示
     @IBAction func answer(){
-        answerLabel.text = zukan[number]
+        answerLabel.text = zukan[number + 1]
     }
     
     
-    //入力された名前のロード
-    @IBAction func load(){
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(textField.text?, forKey: "saveText")
-    }
-    
-    
-    //結果
+    //正誤結果
     @IBAction func result(){
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let saveText = userDefaults.objectForKey("saveText") as String
-        if saveText == zukan[number] {
+        if textField.text == zukan[number+1] {
             resultLabel.text = "成功！"
-            //図鑑収録
+            
+            //獲得したポケモンのnumber+1 を格納
+            var box = NSMutableArray(array:[number + 1])
+          //  box.addObject(number + 1)
+            defaults.setObject(box, forKey: "bookmarks")
+            println(box)
+            
+            
+            
             
         }else{
             resultLabel.text =  "・・・失敗"
@@ -58,18 +57,14 @@ class BallViewController: UIViewController {
     
     //number宣言
     var number:Int!
+    
     //zukan宣言
     var zukan:[Int:String] = [0:"ポケモンマスター"]
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        /* textField.delegate = self    //追加
-        
-        */
-        
-        
-        //ディクショナリー(zukan)にポケモン名収録
         zukan[1]="フシギダネ"
         zukan[2]="フシギソウ"
         zukan[3]="フシギバナ"
@@ -223,19 +218,19 @@ class BallViewController: UIViewController {
         zukan[151]="ミュウ"
         
         
-        //乱数作成（0〜151まで）
-        number = Int(arc4random()%152)
+        //乱数作成（0〜150まで）
+        number = Int(arc4random()%151)
         
         //画像割り当て
-        monsterImageView.image = UIImage(named: "\(number).gif")
+        monsterImageView.image = UIImage(named: "\(number + 1).gif")
         
         //rare度
         switch number {
-        case 1...124:
+        case 0...123:
             rareLabel.text =  "ノーマルポケモンだ。\n気楽にいこう。"
-        case 125...143:
+        case 124...142:
             rareLabel.text =  "レアポケモンだ！\nこれは捕まえたい！"
-        case 144...151:
+        case 143...150:
             rareLabel.text =  "幻のポケモンだ！\n滅多にないチャンスだ！！"
         default:
             break
@@ -243,12 +238,7 @@ class BallViewController: UIViewController {
         
     }
     
-    /*
-    func textFieldShouldClear(textField: UITextField) -> Bool {
-    println("")
-    return true
-    }
-    */
+    
     
 }
 

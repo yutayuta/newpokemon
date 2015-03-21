@@ -21,15 +21,34 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pokemonnzukannew.png" translatesAutoresizingMaskIntoConstraints="NO" id="SHX-e9-1Rc" userLabel="header.png">
-                                <rect key="frame" x="45" y="-9" width="240" height="101"/>
+                                <rect key="frame" x="40" y="-13" width="240" height="101"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-qa-phg" userLabel="monsterball button">
+                                <rect key="frame" x="87" y="418" width="55" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVT-cq-Jss" userLabel="gacha button">
+                                <rect key="frame" x="142" y="347" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="ぽち">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jeg-39-F1S" kind="presentation" id="7iD-NK-FQM"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6n-xN-gdW" userLabel="zukan button">
                                 <rect key="frame" x="183" y="445" width="114" height="93"/>
                                 <state key="normal" image="zukananime.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fdE-VZ-ZgF" kind="presentation" id="gmS-uW-XiD"/>
+                                    <segue destination="fdE-VZ-ZgF" kind="presentation" id="0fG-wl-PIR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ずかん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrG-Qr-wBG" userLabel="zukan label">
@@ -38,42 +57,67 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvf-qa-phg" userLabel="monsterball button">
-                                <rect key="frame" x="87" y="418" width="55" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RS-9H-5K1">
+                                <rect key="frame" x="282" y="28" width="22" height="22"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jeg-39-F1S" kind="show" id="d1x-QV-9HG"/>
+                                    <segue destination="99p-6m-7Vy" kind="show" id="uzS-sW-Q0e"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVT-cq-Jss" userLabel="gacha butston">
-                                <rect key="frame" x="142" y="347" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <state key="normal" title="ぽち">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="gazou" destination="mKv-Fc-dGz" eventType="touchUpInside" id="f77-n2-L9C"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nTg-bn-rr4">
-                                <rect key="frame" x="63" y="385" width="107" height="111"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="ballImageView" destination="nTg-bn-rr4" id="IVt-OG-ymI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAC-2S-rdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="560" y="-183"/>
+            <point key="canvasLocation" x="528" y="-232"/>
+        </scene>
+        <!--SetsumeiView Controller-->
+        <scene sceneID="npO-G0-Fra">
+            <objects>
+                <viewController id="99p-6m-7Vy" userLabel="SetsumeiView Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tRL-YL-brK"/>
+                        <viewControllerLayoutGuide type="bottom" id="q9t-89-9Mx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VnM-HY-xPY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LC6-GE-aUK">
+                                <rect key="frame" x="26" y="111" width="222" height="277"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="〜操作説明〜　モンスターボールを押してがちゃを回そう！ポケモンが表示されたら名前をカタカナで入力しよう。名前があっていたらポケモン図鑑に収録されるお。全151匹集めよう。">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HiraKakuProN-W6"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mX-Jv-o1P">
+                                <rect key="frame" x="117" y="470" width="87" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="もどる">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mKv-Fc-dGz" kind="presentation" id="LaE-6k-UaB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3M-g4-kbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="383"/>
         </scene>
         <!--Ball View Controller-->
         <scene sceneID="wpG-Xg-nzI">
@@ -95,7 +139,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="もどる"/>
                                 <connections>
-                                    <segue destination="mKv-Fc-dGz" kind="presentation" modalTransitionStyle="crossDissolve" id="nVU-9I-JDm"/>
+                                    <segue destination="mKv-Fc-dGz" kind="presentation" id="Noe-sB-MBL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-Vq-yjM" userLabel="result">
@@ -131,7 +175,6 @@
                                 <connections>
                                     <action selector="answer" destination="jeg-39-F1S" eventType="touchUpInside" id="eM5-4U-SdS"/>
                                     <action selector="deleate" destination="jeg-39-F1S" eventType="touchUpInside" id="M4P-Ap-q6I"/>
-                                    <action selector="load" destination="jeg-39-F1S" eventType="touchUpInside" id="mVa-mC-NkO"/>
                                     <action selector="result" destination="jeg-39-F1S" eventType="touchUpInside" id="nHT-bx-nbt"/>
                                 </connections>
                             </button>
@@ -175,7 +218,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mKv-Fc-dGz" kind="show" id="fBi-ki-LuM"/>
+                                    <segue destination="mKv-Fc-dGz" kind="presentation" id="gRn-pS-xbR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,7 +233,7 @@
         <!--Zukan View Controller-->
         <scene sceneID="UIB-2k-f5K">
             <objects>
-                <viewController id="fdE-VZ-ZgF" customClass="zukanViewController" customModule="pokemongacha_swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fdE-VZ-ZgF" customClass="ZukanViewController" customModule="pokemongacha_swift_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hxs-Sv-ueS"/>
                         <viewControllerLayoutGuide type="bottom" id="CAm-Dz-Av0"/>
@@ -199,17 +242,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-l5-HKG">
-                                <rect key="frame" x="97" y="516" width="127" height="44"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="もどる">
-                                    <color key="titleColor" red="0.24024063847790034" green="0.34594765923328208" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mKv-Fc-dGz" kind="presentation" id="Rn8-Jo-75s"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5vY-TI-4pc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="515"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5fk-wn-I8f">
@@ -252,6 +284,17 @@
                                     <outlet property="delegate" destination="fdE-VZ-ZgF" id="Dzh-cQ-s1z"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-l5-HKG">
+                                <rect key="frame" x="97" y="516" width="127" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="もどる">
+                                    <color key="titleColor" red="0.24024063847790034" green="0.34594765923328208" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mKv-Fc-dGz" kind="presentation" id="Pwt-RX-tyc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -270,6 +313,6 @@
         <image name="zukananime.png" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fBi-ki-LuM"/>
+        <segue reference="Pwt-RX-tyc"/>
     </inferredMetricsTieBreakers>
 </document>
